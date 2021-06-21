@@ -1,0 +1,63 @@
+.footer {
+  background-color: $color-secondary;
+  grid-column: full-start / full-end;
+  padding: 4rem 8rem;
+}
+
+.nav {
+  list-style: none;
+
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  align-items: center;
+
+  &__item {
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      color: #fff;
+      text-decoration: none;
+      font-family: $font-display;
+      text-transform: uppercase;
+      text-align: center;
+
+      padding: 1.5rem;
+      display: block;
+
+      transition: all 0.2s;
+
+      &:hover,
+      &:active {
+        background-color: rgba(#fff, 0.1);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font: 1.4rem;
+  color: $color-grey-light-2;
+  margin: 0 auto;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 1.5rem;
+    background-color: $color-secondary;
+    padding: 0;
+    transform: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  a:hover {
+    transform: scale(1.05) rotate(-18deg);
+    background-color: rgba(#fff, 0.1);
+  }
+}

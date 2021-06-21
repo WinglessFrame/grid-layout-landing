@@ -1,0 +1,52 @@
+.sidebar {
+  position: relative;
+  background-color: $color-primary;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+  }
+}
+
+.nav {
+  &-btn {
+    display: none;
+  }
+
+  &-label {
+    display: block;
+    background-color: #fff;
+    width: 5rem;
+    height: 0.5rem;
+    margin: 5rem auto;
+    transition: all 0.2s;
+
+    position: fixed;
+    left: 1rem;
+
+    @media only screen and (max-width: $bp-large) {
+      position: relative;
+      margin: 2rem auto;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      width: 5rem;
+      height: 0.5rem;
+      background-color: #fff;
+      transition: all 0.2s;
+    }
+
+    &::after {
+      transform: translate(0, 0.5rem);
+    }
+
+    &::before {
+      transform: translate(0, -1rem);
+    }
+  }
+}
